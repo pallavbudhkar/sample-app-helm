@@ -1,0 +1,17 @@
+name: Deploy to AKS via Helm
+
+on:
+  workflow_dispatch:
+    inputs:
+      image_repository:
+        description: "Container image repository"
+        default: "ghcr.io/pallavbudhkar/sample-app"
+        required: true
+        type: string
+      image_tag:
+        description: "Container image tag to deploy"
+        default: "latest"
+        required: true
+        type: string
+      namespace:
+        desc
